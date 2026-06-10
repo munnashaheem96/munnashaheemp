@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Munna Shaheem | Futuristic Portfolio</title>
+  <meta name="title" content="Munna Shaheem | Computer Science Student & Flutter Developer">
+  <meta name="description" content="Portfolio of Munna Shaheem, a Computer Science Engineering student and Flutter Developer specializing in high-performance cross-platform apps and modern UI/UX engineering.">
+  <meta name="keywords" content="Munna Shaheem, Flutter Developer, Mobile App Developer, Computer Science Engineer, Portfolio, Software Engineering, Firebase Developer">
+  <meta name="author" content="Munna Shaheem">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/munnashaheem96">
+  <meta property="og:title" content="Munna Shaheem | Futuristic Portfolio">
+  <meta property="og:description" content="Portfolio of Munna Shaheem, a Computer Science Engineering student and Flutter Developer specializing in high-performance cross-platform apps and modern UI/UX engineering.">
+  <meta property="og:image" content="IMG_5141.JPG">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Munna Shaheem | Futuristic Portfolio">
+  <meta property="twitter:description" content="Portfolio of Munna Shaheem, a Computer Science Engineering student and Flutter Developer specializing in high-performance cross-platform apps and modern UI/UX engineering.">
+  <meta property="twitter:image" content="IMG_5141.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>⚡</text></svg>">
+
+  <!-- Fontshare Premium Fonts: Clash Display, Satoshi, Inter -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+  
+  <!-- Inter Font from Google Fonts as fallback/code helper -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Noise Overlay for Cinematic Texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Perspective Grid Backdrop -->
+  <div class="grid-backdrop" id="grid-backdrop" aria-hidden="true"></div>
+
+  <!-- Custom Cursor & Cursor Glow Spotlight -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-content">
+      <div class="loader-brand">MUNNA SHAHEEM</div>
+      <div class="loader-progress-container">
+        <div class="loader-progress-bar" id="loader-progress-bar"></div>
+      </div>
+      <div class="loader-stats">
+        <span class="loader-status">Initializing System...</span>
+        <span class="loader-percentage" id="loader-percentage">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Floating Header -->
+  <header class="main-header glass" id="main-header">
+    <div class="header-container">
+      <a href="#hero" class="logo-link" aria-label="Go to Top">
+        <span class="logo-monogram">M</span>
+        <span class="logo-text">MUNNA SHAHEEM</span>
+      </a>
+
+      <!-- Navigation links -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#skills" class="nav-item">Skills</a></li>
+          <li><a href="#experience" class="nav-item">Experience</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#certifications" class="nav-item">Certifications</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Meta info: Time, Status, Theme Toggle -->
+      <div class="header-meta">
+        <div class="status-indicator">
+          <span class="status-pulse" aria-hidden="true"></span>
+          <span class="status-text">Available</span>
+        </div>
+        <div class="live-clock-container" aria-label="Malappuram local time">
+          <span class="clock-label">MLP</span>
+          <span class="clock-time" id="live-clock">00:00:00 AM</span>
+        </div>
+        <button class="theme-toggle magnetic" id="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="menu-mobile-toggle" id="menu-mobile-toggle" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+      <ul>
+        <li><a href="#about" class="mobile-nav-item">About</a></li>
+        <li><a href="#skills" class="mobile-nav-item">Skills</a></li>
+        <li><a href="#experience" class="mobile-nav-item">Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-item">Projects</a></li>
+        <li><a href="#certifications" class="mobile-nav-item">Certifications</a></li>
+        <li><a href="#contact" class="mobile-nav-item">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <div class="status-indicator">
+          <span class="status-pulse" aria-hidden="true"></span>
+          <span class="status-text">Available for opportunities</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Primary Wrapper for Scrolling content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="aurora-bg" aria-hidden="true">
+        <div class="aurora-glow aurora-1"></div>
+        <div class="aurora-glow aurora-2"></div>
+        <div class="aurora-glow aurora-3"></div>
+      </div>
+      <canvas id="hero-particles" class="particles-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-container">
+        <!-- 3D Glass Card Container -->
+        <div class="hero-glass-card glass tilt-card" id="hero-card">
+          <div class="card-inner">
+            <span class="hero-tagline">Computer Science Engineering Student</span>
+            
+            <h1 class="hero-title" aria-label="Munna Shaheem">
+              <span class="hero-name-line name-first">
+                <span class="char-span">M</span><span class="char-span">U</span><span class="char-span">N</span><span class="char-span">N</span><span class="char-span">A</span>
+              </span>
+              <span class="hero-name-line name-last">
+                <span class="char-span">S</span><span class="char-span">H</span><span class="char-span">A</span><span class="char-span">H</span><span class="char-span">E</span><span class="char-span">E</span><span class="char-span">M</span>
+              </span>
+            </h1>
+
+            <div class="role-switcher-container">
+              <span class="role-static">I am a</span>
+              <span class="role-switcher-text" id="role-text">Flutter Developer</span>
+            </div>
+
+            <p class="hero-summary">
+              Creating high-fidelity, fluid mobile and web interfaces with optimized backend integration. Let's design the next generation of applications.
+            </p>
+
+            <div class="hero-actions">
+              <a href="Munna_Shaheem_Resume.pdf" class="btn btn-primary magnetic" download="Munna_Shaheem_Resume.pdf">
+                <span class="btn-text">Download Resume</span>
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </span>
+              </a>
+              <a href="#projects" class="btn btn-secondary magnetic">
+                <span class="btn-text">View Projects</span>
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </a>
+              <a href="#contact" class="btn btn-tertiary magnetic">
+                <span class="btn-text">Contact Me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating HUD Widgets -->
+        <div class="hud-widget performance-hud glass tilt-card animate-on-scroll" id="perf-hud" aria-hidden="true">
+          <div class="hud-header">
+            <span class="hud-dot green"></span>
+            <span class="hud-title">SYSTEM MONITOR</span>
+          </div>
+          <div class="hud-body">
+            <div class="hud-stat-row">
+              <span class="hud-label">FPS</span>
+              <span class="hud-val green" id="fps-val">60.0</span>
+            </div>
+            <canvas id="fps-sparkline" width="120" height="30"></canvas>
+            <div class="hud-stat-row">
+              <span class="hud-label">RENDER</span>
+              <span class="hud-val">1.2ms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hud-widget location-hud glass tilt-card animate-on-scroll" id="loc-hud" aria-hidden="true">
+          <div class="hud-header">
+            <span class="hud-dot blue"></span>
+            <span class="hud-title">KERALA NODE [IST]</span>
+          </div>
+          <div class="hud-body">
+            <div class="loc-coords">10.98° N, 76.07° E</div>
+            <div class="loc-network">STATUS: SECURE GATEWAY</div>
+          </div>
+        </div>
+
+        <!-- Floating Terminal Panel -->
+        <div class="terminal-panel glass tilt-card" id="hero-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-close"></span>
+              <span class="dot dot-minimize"></span>
+              <span class="dot dot-maximize"></span>
+            </div>
+            <div class="terminal-tab">munnashaheem.dart - IDE</div>
+          </div>
+          <div class="terminal-body" id="terminal-output">
+            <div class="terminal-line"><span class="t-keyword">import</span> <span class="t-string">'package:flutter/material.dart'</span>;</div>
+            <div class="terminal-line"><span class="t-keyword">import</span> <span class="t-string">'package:firebase_core/firebase_core.dart'</span>;</div>
+            <div class="terminal-line"></div>
+            <div class="terminal-line"><span class="t-keyword">void</span> <span class="t-function">main</span>() <span class="t-keyword">async</span> {</div>
+            <div class="terminal-line">&nbsp;&nbsp;WidgetsFlutterBinding.<span class="t-function">ensureInitialized</span>();</div>
+            <div class="terminal-line">&nbsp;&nbsp;<span class="t-keyword">await</span> Firebase.<span class="t-function">initializeApp</span>();</div>
+            <div class="terminal-line">&nbsp;&nbsp;<span class="t-function">runApp</span>(<span class="t-keyword">const</span> <span class="t-function">MunnaPortfolio</span>());</div>
+            <div class="terminal-line">}</div>
+            <div class="terminal-line"></div>
+            <div class="terminal-line"><span class="t-comment">// Console logs loading technologies:</span></div>
+            <div class="terminal-line t-log">> Initializing Flutter Development...</div>
+            <div class="terminal-line t-log">> Loading Firebase Integration...</div>
+            <div class="terminal-line t-log">> Fetching REST APIs...</div>
+            <div class="terminal-line t-log">> Initializing Java Programming...</div>
+            <div class="terminal-line t-log">> Resolving React Development...</div>
+            <div class="terminal-line t-log">> Rendering UI Engineering...</div>
+            <div class="terminal-line terminal-cursor-line"><span class="t-cursor">> </span><span id="terminal-typed"></span><span class="cursor-blink">|</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <a href="#about" class="scroll-arrow magnetic" aria-label="Scroll Down">
+          <span class="mouse-icon">
+            <span class="wheel"></span>
+          </span>
+          <span class="arrow-text">Explore System</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        
+        <div class="about-grid">
+          <div class="about-text-content">
+            <span class="section-tag animate-on-scroll">01 / STORYTELLING</span>
+            <h2 class="section-title massive animate-on-scroll">Engineering Smooth Mobile Experiences.</h2>
+            
+            <div class="narrative-blocks animate-on-scroll">
+              <p class="paragraph-lead">
+                Computer Science Engineering student with hands-on experience in Flutter application development and strong knowledge of Java, SQL, Object-Oriented Programming, and software development concepts.
+              </p>
+              <p>
+                Experienced in building real-world applications with Firebase, API integration, authentication systems, and responsive UI design. Passionate about software engineering, problem solving, and modern technologies.
+              </p>
+              <p>
+                Bridging the gap between aesthetic design systems and structural backend robustness, focusing on elegant code architecture, cross-platform performance, and smooth animation experiences.
+              </p>
+            </div>
+
+            <!-- Physics-based counter stats -->
+            <div class="stats-grid">
+              <div class="stat-card glass animate-on-scroll" data-target="10">
+                <div class="stat-num"><span class="counter">0</span>+</div>
+                <div class="stat-label">Technologies Mastered</div>
+              </div>
+              <div class="stat-card glass animate-on-scroll" data-target="2">
+                <div class="stat-num"><span class="counter">0</span>+</div>
+                <div class="stat-label">Internships Finished</div>
+              </div>
+              <div class="stat-card glass animate-on-scroll" data-target="2">
+                <div class="stat-num"><span class="counter">0</span>+</div>
+                <div class="stat-label">Live App Projects</div>
+              </div>
+              <div class="stat-card glass animate-on-scroll" data-target="6">
+                <div class="stat-num"><span class="counter">0</span>+</div>
+                <div class="stat-label">Certifications Earned</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glassmorphic Portrait Frame and Education -->
+          <div class="about-visuals">
+            <div class="portrait-container glass tilt-card animate-on-scroll">
+              <div class="portrait-inner">
+                <img src="IMG_5141.JPG" alt="Munna Shaheem Portrait" class="portrait-img">
+                <div class="portrait-glow"></div>
+                <div class="portrait-specs">
+                  <span class="spec-coordinate">10°58'31"N 76°04'16"E</span>
+                  <span class="spec-device">Flutter Mobile Device simulator</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="education-block glass animate-on-scroll">
+              <h3 class="education-title">Academic Background</h3>
+              
+              <div class="edu-item">
+                <div class="edu-year">2023 – 2027</div>
+                <div class="edu-details">
+                  <h4>B.E. Computer Science and Engineering</h4>
+                  <p class="edu-inst">Sri Shanmugha College of Engineering and Technology</p>
+                  <p class="edu-loc">Salem, Tamil Nadu (Pursuing)</p>
+                </div>
+              </div>
+              
+              <div class="edu-item">
+                <div class="edu-year">2021 – 2023</div>
+                <div class="edu-details">
+                  <h4>Secondary Education</h4>
+                  <p class="edu-inst">Abdurahiman Nagar Higher Secondary School</p>
+                  <p class="edu-loc">Chendappuraya, Malappuram, Kerala</p>
+                </div>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-year">2020 – 2021</div>
+                <div class="edu-details">
+                  <h4>SSLC Education</h4>
+                  <p class="edu-inst">Abdurahiman Nagar Higher Secondary School</p>
+                  <p class="edu-loc">Chendappuraya, Malappuram, Kerala</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        
+        <div class="skills-header">
+          <span class="section-tag animate-on-scroll">02 / SKILL UNIVERSE</span>
+          <h2 class="section-title massive animate-on-scroll">Interactive Neural Network.</h2>
+          <p class="skills-subtitle animate-on-scroll">
+            Drag, hover, and click nodes to explore my technical skills universe. Double click nodes to activate focal points.
+          </p>
+        </div>
+
+        <!-- Universe Graph Container -->
+        <div class="skills-universe-container glass animate-on-scroll">
+          <canvas id="skills-canvas"></canvas>
+          <div class="universe-hud">
+            <div class="hud-item"><span class="hud-key">Status:</span> <span class="hud-val">Active Map</span></div>
+            <div class="hud-item"><span class="hud-key">Engine:</span> <span class="hud-val">HTML5 Canvas 2D</span></div>
+            <div class="hud-item"><span class="hud-key">Modes:</span> <span class="hud-val">Drag / Orbit Physics</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="experience-section" id="experience">
+      <div class="section-container">
+        
+        <div class="experience-header">
+          <span class="section-tag animate-on-scroll">03 / TIMELINE</span>
+          <h2 class="section-title massive animate-on-scroll">Cinematic Timeline.</h2>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Dynamic growing scrollbar line -->
+          <div class="timeline-scroll-track" aria-hidden="true">
+            <div class="timeline-scroll-progress" id="timeline-progress"></div>
+          </div>
+
+          <!-- Timeline Card 01 -->
+          <div class="timeline-item left animate-on-scroll">
+            <div class="timeline-badge">
+              <span class="badge-dot"></span>
+            </div>
+            <div class="timeline-card glass tilt-card">
+              <span class="card-meta">Jan 2026 – Mar 2026</span>
+              <h3 class="card-title">App Development Intern</h3>
+              <h4 class="card-subtitle">APM Alpha Pixel Media, Salem</h4>
+              
+              <ul class="achievements-list">
+                <li>Developed responsive Flutter UI components to enhance application performance and user experience.</li>
+                <li>Built reusable widgets and structured frontend components to improve code maintainability and development efficiency.</li>
+              </ul>
+              
+              <div class="card-tag">Flutter UI</div>
+            </div>
+          </div>
+
+          <!-- Timeline Card 02 -->
+          <div class="timeline-item right animate-on-scroll">
+            <div class="timeline-badge">
+              <span class="badge-dot"></span>
+            </div>
+            <div class="timeline-card glass tilt-card">
+              <span class="card-meta">Jan 2025 – Feb 2025</span>
+              <h3 class="card-title">Project Intern</h3>
+              <h4 class="card-subtitle">IN22 Labs, Chennai</h4>
+              
+              <ul class="achievements-list">
+                <li>Worked on design and multimedia-related activities while contributing to frontend visual elements and user interface improvements.</li>
+                <li>Assisted in enhancing application layouts and maintaining consistency in user interface design standards across different screens.</li>
+                <li>Gained practical exposure to Flutter application development, collaborative workflows, and modern software development practices.</li>
+              </ul>
+              
+              <div class="card-tag">UI / UX & Design</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project Showcase Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        
+        <div class="projects-header">
+          <span class="section-tag animate-on-scroll">04 / CREATIVE LABS</span>
+          <h2 class="section-title massive animate-on-scroll">Selected Works.</h2>
+        </div>
+
+        <!-- Project 01: Rapid Aid -->
+        <div class="project-showcase-item">
+          <div class="project-info-card glass animate-on-scroll">
+            <span class="project-number">PROJECT 01</span>
+            <h3 class="project-title">Rapid Aid</h3>
+            <span class="project-subtitle">Integrated Emergency Response System</span>
+            
+            <p class="project-desc">
+              A location-based emergency platform designed to connect users quickly with nearby blood donors and pharmacy services. Fully integrated with Firebase for real-time tracking, live updates, and user availability mapping.
+            </p>
+
+            <div class="project-tech-tags">
+              <span>Flutter</span>
+              <span>Firebase</span>
+              <span>Node.js</span>
+              <span>REST APIs</span>
+            </div>
+
+            <ul class="project-features-list">
+              <li>Nearby blood donor discovery map</li>
+              <li>Live pharmacy stock & availability checks</li>
+              <li>Real-time database sync for instant response</li>
+              <li>Fully fluid mobile interface for emergency scenarios</li>
+            </ul>
+
+            <div class="project-actions">
+              <a href="https://github.com/munnashaheem96/rapid-aid-blood" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic">
+                <span class="btn-text">View Source Code</span>
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3D Phone Mockup Showcase -->
+          <div class="project-mockup-container animate-on-scroll">
+            <div class="phone-mockup-3d tilt-card">
+              <div class="phone-screen glass">
+                <div class="phone-notch"></div>
+                <!-- Dynamic Screen content with simulated transitions -->
+                <div class="screen-content" id="phone-screen-content">
+                  <!-- SCREEN 1: Splash / Welcome -->
+                  <div class="phone-slide active" id="slide-1">
+                    <div class="slide-header">Rapid Aid</div>
+                    <div class="slide-illustration">
+                      <div class="pulse-ring"></div>
+                      <div class="pulse-center">🆘</div>
+                    </div>
+                    <div class="slide-footer">Connecting Emergency Services</div>
+                  </div>
+                  <!-- SCREEN 2: Donor Search -->
+                  <div class="phone-slide" id="slide-2">
+                    <div class="slide-header">Searching Donors</div>
+                    <div class="donor-map-sim">
+                      <div class="map-dot map-dot-user"></div>
+                      <div class="map-dot map-dot-donor donor-1"></div>
+                      <div class="map-dot map-dot-donor donor-2"></div>
+                      <div class="map-line line-1"></div>
+                      <div class="map-line line-2"></div>
+                    </div>
+                    <div class="slide-footer">2 Donors Located Near You</div>
+                  </div>
+                  <!-- SCREEN 3: Status / Chat -->
+                  <div class="phone-slide" id="slide-3">
+                    <div class="slide-header">Emergency Request</div>
+                    <div class="chat-sim">
+                      <div class="chat-bubble left">Pharmacy A: Stock available.</div>
+                      <div class="chat-bubble right">Request: 2 units O+ Blood</div>
+                      <div class="chat-bubble left">Donor B: Enroute to hospital.</div>
+                    </div>
+                    <div class="slide-footer">Real-time Firebase Sync Active</div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-reflection"></div>
+              <div class="phone-shadow"></div>
+            </div>
+            <!-- Interactive phone controls -->
+            <div class="mockup-indicator">
+              <span class="mock-dot active" data-slide="1"></span>
+              <span class="mock-dot" data-slide="2"></span>
+              <span class="mock-dot" data-slide="3"></span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Project 02: SSCET Outpass App -->
+        <div class="project-showcase-item project-alternate">
+          <div class="project-info-card glass animate-on-scroll">
+            <span class="project-number">PROJECT 02</span>
+            <h3 class="project-title">SSCET Outpass App</h3>
+            <span class="project-subtitle">Digital Request & Approval System</span>
+            
+            <p class="project-desc">
+              An institutional platform that replaces manual paper outpass requests with a digital workflow. Leverages Firebase to route student requests to specific administrative personnel in real time, validating statuses and logging exit/re-entry timings.
+            </p>
+
+            <div class="project-tech-tags">
+              <span>Flutter</span>
+              <span>Firebase Auth</span>
+              <span>Cloud Firestore</span>
+            </div>
+
+            <ul class="project-features-list">
+              <li>Digital outpass requesting module</li>
+              <li>Real-time approval workflow notification</li>
+              <li>Admin & Warden authentication panels</li>
+              <li>Historical log analysis dashboards</li>
+            </ul>
+
+            <div class="project-actions">
+              <a href="https://github.com/munnashaheem96/sscet-outpass-app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic">
+                <span class="btn-text">View Source Code</span>
+                <span class="btn-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Architecture & Workflow diagram visualizer -->
+          <div class="project-diagram-container glass tilt-card animate-on-scroll">
+            <div class="diagram-inner">
+              <div class="diagram-title">System Architecture & Data Flow</div>
+              <div class="architecture-mesh">
+                <div class="node node-client">
+                  <span class="node-icon">📱</span>
+                  <span class="node-label">Student App</span>
+                </div>
+                <div class="node node-server">
+                  <span class="node-icon">🔥</span>
+                  <span class="node-label">Firebase DB</span>
+                </div>
+                <div class="node node-admin">
+                  <span class="node-icon">💻</span>
+                  <span class="node-label">Admin Dashboard</span>
+                </div>
+                <svg class="flow-lines-svg" width="100%" height="100%" viewBox="0 0 300 150">
+                  <path d="M50 75 h100" class="flow-line active" id="flow-line-1"></path>
+                  <path d="M250 75 h-100" class="flow-line" id="flow-line-2"></path>
+                  <path d="M150 75 v-50" class="flow-line" id="flow-line-3"></path>
+                </svg>
+                <div class="packet-sim" id="packet-anim"></div>
+              </div>
+              <div class="workflow-steps">
+                <div class="w-step active" data-step="1">1. Student Submits Request</div>
+                <div class="w-step" data-step="2">2. Firebase Sync & Push Notifications</div>
+                <div class="w-step" data-step="3">3. Warden Approves/Rejects in App</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certification Wall Section -->
+    <section class="certifications-section" id="certifications">
+      <div class="section-container">
+        
+        <div class="certifications-header">
+          <span class="section-tag animate-on-scroll">05 / VERIFIED SKILLS</span>
+          <h2 class="section-title massive animate-on-scroll">Certification Wall.</h2>
+        </div>
+
+        <div class="certifications-grid">
+          
+          <!-- Certification 01 -->
+          <div class="cert-card glass tilt-card animate-on-scroll">
+            <div class="cert-glow"></div>
+            <div class="cert-badge">☁️</div>
+            <h3 class="cert-title">Cloud Computing</h3>
+            <p class="cert-issuer">NPTEL Certification</p>
+            <span class="cert-spec">AWS / Architecture / Services</span>
+          </div>
+
+          <!-- Certification 02 -->
+          <div class="cert-card glass tilt-card animate-on-scroll">
+            <div class="cert-glow"></div>
+            <div class="cert-badge">☕</div>
+            <h3 class="cert-title">Java Programming</h3>
+            <p class="cert-issuer">HackerRank Certification</p>
+            <span class="cert-spec">Data Structures / OOP Concepts</span>
+          </div>
+
+          <!-- Certification 03 -->
+          <div class="cert-card glass tilt-card animate-on-scroll">
+            <div class="cert-glow"></div>
+            <div class="cert-badge">🎨</div>
+            <h3 class="cert-title">CSS (Basic)</h3>
+            <p class="cert-issuer">HackerRank Certification</p>
+            <span class="cert-spec">Responsive Design / Flexbox / Grid</span>
+          </div>
+
+          <!-- Certification 04 -->
+          <div class="cert-card glass tilt-card animate-on-scroll">
+            <div class="cert-glow"></div>
+            <div class="cert-badge">⚡</div>
+            <h3 class="cert-title">JavaScript (Basic)</h3>
+            <p class="cert-issuer">HackerRank Certification</p>
+            <span class="cert-spec">ES6 / Async / DOM Manipulation</span>
+          </div>
+
+          <!-- Certification 05 -->
+          <div class="cert-card glass tilt-card animate-on-scroll">
+            <div class="cert-glow"></div>
+            <div class="cert-badge">🐍</div>
+            <h3 class="cert-title">Python (Basic)</h3>
+            <p class="cert-issuer">HackerRank Certification</p>
+            <span class="cert-spec">Algorithms / File I/O / Scripting</span>
+          </div>
+
+          <!-- Certification 06 -->
+          <div class="cert-card glass tilt-card animate-on-scroll">
+            <div class="cert-glow"></div>
+            <div class="cert-badge">🎯</div>
+            <h3 class="cert-title">Flutter & Dart</h3>
+            <p class="cert-issuer">Udemy Complete Guide</p>
+            <span class="cert-spec">State Management / UI Elements / REST APIs</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact & Ending Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-tag animate-on-scroll">06 / NETWORK</span>
+            <h2 class="section-title massive animate-on-scroll">Let's build something beautiful.</h2>
+            
+            <p class="contact-subtext animate-on-scroll">
+              I am open to discussions on Flutter development, software engineering internships, backend integration tasks, or collaborative project creation.
+            </p>
+
+            <div class="contact-cards">
+              
+              <!-- Email Card -->
+              <a href="mailto:munnashaheemperinchikkal@gmail.com" class="contact-card-item glass magnetic animate-on-scroll">
+                <div class="card-icon">✉️</div>
+                <div class="card-details">
+                  <span class="item-label">Email</span>
+                  <span class="item-val">munnashaheemperinchikkal@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- Phone Card -->
+              <a href="tel:+919633962953" class="contact-card-item glass magnetic animate-on-scroll">
+                <div class="card-icon">📞</div>
+                <div class="card-details">
+                  <span class="item-label">Phone</span>
+                  <span class="item-val">+91 9633962953</span>
+                </div>
+              </a>
+
+              <!-- GitHub Card -->
+              <a href="https://github.com/munnashaheem96" target="_blank" rel="noopener noreferrer" class="contact-card-item glass magnetic animate-on-scroll">
+                <div class="card-icon">🐙</div>
+                <div class="card-details">
+                  <span class="item-label">GitHub</span>
+                  <span class="item-val">github.com/munnashaheem96</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn Card -->
+              <a href="https://linkedin.com/in/munnashaheemp" target="_blank" rel="noopener noreferrer" class="contact-card-item glass magnetic animate-on-scroll">
+                <div class="card-icon">💼</div>
+                <div class="card-details">
+                  <span class="item-label">LinkedIn</span>
+                  <span class="item-val">linkedin.com/in/munnashaheemp</span>
+                </div>
+              </a>
+
+              <!-- Location Card -->
+              <div class="contact-card-item glass animate-on-scroll">
+                <div class="card-icon">📍</div>
+                <div class="card-details">
+                  <span class="item-label">Location</span>
+                  <span class="item-val">Malappuram, Kerala, India</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Interactive 3D Dot Globe on Canvas -->
+          <div class="contact-globe-container animate-on-scroll">
+            <div class="globe-overlay-hud">
+              <span class="hud-title">🌍 3D GLOBAL COORDINATOR</span>
+              <span class="hud-stats">Orbit Speed: 0.002 rad/s</span>
+            </div>
+            <canvas id="globe-canvas"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Keyboard Command Palette (Ctrl+K Modal) -->
+  <dialog class="command-palette glass" id="command-palette" aria-label="Command Palette">
+    <div class="palette-container">
+      <div class="palette-search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="palette-input" id="palette-search-input" placeholder="Type a command or search section..." autocomplete="off">
+        <span class="esc-badge">ESC</span>
+      </div>
+      
+      <div class="palette-results" id="palette-results">
+        <!-- JS populates commands here -->
+      </div>
+      
+      <div class="palette-footer">
+        <span>Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate</span>
+        <span><kbd>Enter</kbd> to select</span>
+        <span><kbd>Ctrl + K</kbd> to close</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Back to Top Rocket Button -->
+  <button class="back-to-top magnetic" id="back-to-top" aria-label="Scroll to Top">
+    <span class="rocket-trail"></span>
+    <span class="rocket-body">🚀</span>
+  </button>
+
+  <!-- Footer Info -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Munna Shaheem. Designed in futuristic pure luxury style.</p>
+      <div class="keyboard-hint">Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to open control console</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
